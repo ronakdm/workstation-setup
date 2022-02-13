@@ -26,7 +26,7 @@ alias <host_nickname>="ssh -i ~/.ssh/<filename> <user>@<host_name>"
 
 ## Basic Tools
 
-Install Homebrew using the instructions on the [site](https://brew.sh/). Make sure to following the post-installation instructions to add `brew` to the path. Then, run:
+Install Homebrew using the instructions on the [site](https://brew.sh/). Make sure to following the post-installation instructions on-screen to add `brew` to the path. Then, run:
 ```
 brew install wget
 brew install tmux
@@ -50,8 +50,8 @@ To remove an environment, run:
 ```
 conda remove --name <env_name> --all
 ```
-To verify that the correct Python installation is being called, run `which python` or `python --version`.
+To verify that the correct Python installation is being called, run `which python` or `python --version`. See more info [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
 ## VS Code
 
-After downloading and installing [Visual Studio Code](https://code.visualstudio.com/download), get the [Remote Development Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack).
+After downloading and installing [Visual Studio Code](https://code.visualstudio.com/download), get the [Remote Development Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) and the [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python). For formatting, search `python formatting provider` and select `black`.
