@@ -1,6 +1,6 @@
 # workstation-setup
 
-Instructions for setting up a development environment on a new computer or remote server.
+Instructions for setting up a development environment on a new computer or remote tserver.
 
 ## Key-Pair Authentication
 
@@ -24,11 +24,13 @@ Finally, in the shell configuration file (`~/.zshrc` for MacOS, which should be 
 alias <host_nickname>="ssh -i ~/.ssh/<filename> <user>@<host_name>"
 ```
 
-## Homebrew and `wget`
+## Basic Tools
 
 Install Homebrew using the instructions on the [site](https://brew.sh/). Make sure to following the post-installation instructions to add `brew` to the path. Then, run:
 ```
 brew install wget
+brew install tmux
+brew install htop
 ```
 
 ## Python Setup
@@ -49,3 +51,7 @@ To remove an environment, run:
 conda remove --name <env_name> --all
 ```
 To verify that the correct Python installation is being called, run `which python` or `python --version`.
+
+## VS Code
+
+After downloading and installing [Visual Studio Code](https://code.visualstudio.com/download), get the [Remote Development Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack).
