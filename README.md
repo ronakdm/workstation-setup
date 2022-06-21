@@ -2,6 +2,22 @@
 
 Instructions for setting up a development environment on a new computer or remote server.
 
+## Adding Users
+
+If you do not yet have an account, a user with `sudo` privileges needs to create it using the following. 
+```
+sudo adduser <user>
+```
+Follow the on-screen prompts and set a temporary password for the new user. Note that `adduser` is separate and better than the related command `useradd`, as `adduser` also creates additional user folders, directories, and other necessary functions easily and `useradd` does not.
+
+Verify that you can log in and then change the temporary password.
+```
+ssh  <user>@<host_name>
+passwd
+```
+Verify that you can log in once again, this time with the new password.
+
+
 ## Key-Pair Authentication
 
 First, set up passwordless SSH. If you do not have a `.ssh` folder in your home directory, run `mkdir ~/.ssh`. Then generate your public and private key for `ssh` on the **local** machine.
@@ -13,11 +29,7 @@ Copy over the public key to the **remote** machine.
 ```
 scp  ~/.ssh/<filename>.pub <user>@<host_name>:~
 ```
-Log into the remote machine.
-```
-ssh  <user>@<host_name>
-```
-If you do not already have an `authorized_keys` file in the `.ssh` folder, create one.
+Log into the remote machine. If you do not already have an `authorized_keys` file in the `.ssh` folder, create one.
 ```
 touch ~/.ssh/authorized_keys
 ```
