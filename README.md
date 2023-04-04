@@ -42,7 +42,7 @@ Now, check that you can use the private key to log into the remote machine witho
 ```
 ssh -i ~/.ssh/<filename> <user>@<host_name>
 ```
-If you can successfully, remove the public key `<filename>.pub` from both the local and remote machines.
+If you can do this successfully, you can remove the public key `<filename>.pub` from both the local and remote machines. You may optionally keep the public key on the local machine and use it to authenticate connections to other remote servers as well.
 
 The final step is to create an alias for the login command. Open the shell configuration file (`~/.zshrc` for MacOS, which should be created if it doesn't exit), and add the `ssh` command as an alias.
 ```
